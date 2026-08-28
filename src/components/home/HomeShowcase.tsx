@@ -19,6 +19,18 @@ export default function HomeShowcase() {
       if (saved && HERO_VARIANTS.some((h) => h.id === saved)) {
         setActiveHeroId(saved)
       }
+
+      const handleHeroChange = (e: Event) => {
+        const customEvent = e as CustomEvent<{ id: string }>
+        if (customEvent.detail?.id) {
+          setActiveHeroId(customEvent.detail.id)
+        }
+      }
+
+      window.addEventListener("insitu-hero-change", handleHeroChange)
+      return () => {
+        window.removeEventListener("insitu-hero-change", handleHeroChange)
+      }
     }
   }, [])
 

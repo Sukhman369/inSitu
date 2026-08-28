@@ -24,6 +24,11 @@ export default function StudioDock() {
     setActiveHeroId(id)
     if (typeof window !== "undefined") {
       localStorage.setItem("insitu_hero", id)
+      window.dispatchEvent(
+        new CustomEvent("insitu-hero-change", {
+          detail: { id },
+        })
+      )
     }
   }
 
