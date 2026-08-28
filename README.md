@@ -2,10 +2,54 @@
 
 > From the creators of **Git Legacy**.
 
-**inSitu** — The ultimate solution for in-situ visual brand studios and live design decision engines in modern web applications.
+**inSitu** is an open-source visual brand studio and live design decision engine for modern web apps. 
 
-Preview, compare, and hot-swap color palettes, brand identities, and structural hero layouts directly inside your live application in real time—with zero build delay and instant stakeholder alignment.
+Preview, combine, and hot-swap 100+ UI designs, hero layouts, and color palettes live in real time—with zero build delay and instant stakeholder alignment.
 
 ---
 
-*Stay tuned. Initial open-source release coming soon.*
+## 🚀 Quickstart (Local Development)
+
+This project has **zero complex prerequisites**—no Docker, no databases, no external backend required.
+
+```bash
+# 1. Clone the repository
+git clone https://github.com/Sukhman369/inSitu.git
+cd inSitu
+
+# 2. Install dependencies
+npm install
+
+# 3. Start the development server
+npm run dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+---
+
+## 🛠️ Tech Stack
+
+- **Framework:** Next.js 15 (App Router)
+- **Library:** React 19
+- **Styling:** Tailwind CSS + CSS Custom Properties (Native Design Tokens)
+- **Icons:** Lucide React
+- **Language:** TypeScript
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! We are building a curated collection of 100+ production-grade UI blocks and design token palettes.
+
+1. Fork the repo
+2. Create your feature branch (`git checkout -b feature/new-hero-variant`)
+3. Commit your changes (`git commit -m 'feat: add minimalist split hero'`)
+4. Push to the branch (`git push origin feature/new-hero-variant`)
+5. Open a Pull Request
+
+---
+
+## 📄 License
+
+MIT License.
