@@ -62,22 +62,121 @@
 
 @layer components {
   .content-container {
-    @apply max-w-[1440px] w-full mx-auto px-4 sm:px-6 lg:px-12;
+    max-width: 1440px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  @media (min-width: 640px) {
+    .content-container {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+  }
+  @media (min-width: 1024px) {
+    .content-container {
+      padding-left: 3rem;
+      padding-right: 3rem;
+    }
   }
 
   .editorial-container {
-    @apply max-w-[1200px] w-full mx-auto px-4 sm:px-6 lg:px-8;
+    max-width: 1200px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  @media (min-width: 640px) {
+    .editorial-container {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+  }
+  @media (min-width: 1024px) {
+    .editorial-container {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
   }
 
   .btn-primary {
-    @apply inline-flex items-center justify-center bg-insitu-green text-white text-xs uppercase font-medium tracking-editorial px-8 py-3.5 rounded-[2px] transition-all duration-300 hover:bg-insitu-green-hover hover:shadow-sm active:scale-[0.99] disabled:opacity-50 disabled:pointer-events-none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--insitu-primary);
+    color: #ffffff;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    padding: 0.875rem 2rem;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  .btn-primary:hover {
+    background-color: var(--insitu-primary-hover);
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  }
+  .btn-primary:active {
+    transform: scale(0.99);
   }
 
   .btn-secondary {
-    @apply inline-flex items-center justify-center border border-insitu-border bg-transparent text-insitu-charcoal text-xs uppercase font-medium tracking-editorial px-8 py-3.5 rounded-[2px] transition-all duration-300 hover:border-insitu-charcoal hover:bg-white active:scale-[0.99];
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--insitu-border);
+    background-color: transparent;
+    color: var(--insitu-charcoal);
+    font-size: 0.75rem;
+    line-height: 1rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    padding: 0.875rem 2rem;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  .btn-secondary:hover {
+    border-color: var(--insitu-charcoal);
+    background-color: #ffffff;
+  }
+  .btn-secondary:active {
+    transform: scale(0.99);
   }
 
   .editorial-link {
-    @apply relative inline-block text-xs uppercase tracking-editorial font-medium text-insitu-charcoal transition-colors hover:text-insitu-green after:content-[''] after:absolute after:bottom-[-2px] after:left-0 after:w-0 after:h-[1px] after:bg-insitu-green after:transition-all after:duration-300 hover:after:w-full;
+    position: relative;
+    display: inline-block;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    font-weight: 500;
+    color: var(--insitu-charcoal);
+    transition: color 0.3s ease;
+  }
+  .editorial-link:hover {
+    color: var(--insitu-primary);
+  }
+  .editorial-link::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: var(--insitu-primary);
+    transition: all 0.3s ease;
+  }
+  .editorial-link:hover::after {
+    width: 100%;
   }
 }
