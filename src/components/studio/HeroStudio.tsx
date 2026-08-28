@@ -69,12 +69,20 @@ export default function HeroStudioModal({
               Hot-swap between 7 distinct structural layout archetypes in real time.
             </p>
           </div>
-          <button
-            onClick={onClose}
-            className="text-insitu-muted hover:text-insitu-charcoal font-mono text-sm p-2"
-          >
-            ✕
-          </button>
+          <div className="flex items-center gap-2 flex-shrink-0 ml-4">
+            <button
+              onClick={onClose}
+              className="btn-primary py-2 px-3.5 text-[10px]"
+            >
+              APPLY & EXPLORE
+            </button>
+            <button
+              onClick={onClose}
+              className="text-insitu-muted hover:text-insitu-charcoal font-mono text-sm p-2"
+            >
+              ✕
+            </button>
+          </div>
         </div>
 
         {/* Hero Variants List */}
