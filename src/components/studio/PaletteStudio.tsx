@@ -99,9 +99,12 @@ export default function PaletteStudio({ isOpen, onClose }: PaletteStudioProps) {
             </button>
             <button
               onClick={onClose}
-              className="text-insitu-muted hover:text-insitu-charcoal font-mono text-sm p-2"
+              className="px-2.5 py-1.5 border border-insitu-border hover:border-insitu-charcoal bg-white/50 hover:bg-white text-insitu-charcoal font-mono text-[11px] uppercase tracking-wider rounded-[2px] transition-all flex items-center gap-1 shadow-2xs active:scale-95"
+              aria-label="Close modal"
+              title="Close modal (Esc)"
             >
-              ✕
+              <span>✕</span>
+              <span className="hidden sm:inline text-[10px] text-insitu-muted">ESC</span>
             </button>
           </div>
         </div>
