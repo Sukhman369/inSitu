@@ -55,11 +55,11 @@ export default function CuratedGrid() {
               className="group flex flex-col bg-insitu-sand/40 border border-insitu-border p-6 rounded-[2px] hover:border-insitu-charcoal/40 transition-all duration-300 hover:bg-white"
             >
               {/* Image Container */}
-              <div className="aspect-[3/4] w-full flex items-center justify-center overflow-hidden relative mb-6 bg-insitu-canvas rounded-[2px]">
+              <div className="aspect-[3/4] w-full overflow-hidden relative mb-6 bg-white rounded-[2px] border border-insitu-border/80 shadow-sm">
                 <img
                   src={prod.image}
                   alt={prod.title}
-                  className="max-h-[85%] w-auto object-contain transition-transform duration-500 group-hover:scale-105"
+                  className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
                 />
                 <span className="absolute top-3 left-3 text-[9px] font-mono uppercase px-2 py-0.5 bg-insitu-canvas border border-insitu-border text-insitu-charcoal">
                   {prod.category}

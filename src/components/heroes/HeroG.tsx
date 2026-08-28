@@ -150,12 +150,14 @@ export default function HeroG() {
                   {model.name} · {model.price}
                 </div>
 
-                {/* Model Cutout Image */}
-                <img
-                  src={model.image}
-                  alt={model.garmentName}
-                  className="h-[380px] sm:h-[500px] w-auto object-contain pointer-events-none drop-shadow-2xl"
-                />
+                {/* Model Portrait Image Frame (Intact image as is) */}
+                <div className="overflow-hidden rounded-[2px] border border-white/20 shadow-2xl bg-white">
+                  <img
+                    src={model.image}
+                    alt={model.garmentName}
+                    className="h-[340px] sm:h-[440px] w-[240px] sm:w-[290px] object-cover object-top pointer-events-none"
+                  />
+                </div>
 
                 {/* Hotspot Pulse Dot */}
                 <span
