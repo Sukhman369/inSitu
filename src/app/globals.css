@@ -3,12 +3,81 @@
 @tailwind utilities;
 
 :root {
-  --background: #0d0e12;
-  --foreground: #f3f4f6;
+  --insitu-primary: #C4862A;
+  --insitu-primary-hover: #A36B1A;
+  --insitu-primary-light: #FFF1DF;
+  --insitu-primary-subtle: rgba(196, 134, 42, 0.09);
+  --insitu-canvas: #FDFAF6;
+  --insitu-sand: #F7F0E4;
+  --insitu-ecru: #EDE3D3;
+  --insitu-cream: #FFFFFF;
+  --insitu-border: #E8DAC8;
+  --insitu-border-dark: #D4C4AA;
+  --insitu-charcoal: #1C1510;
+  --insitu-muted: #7A6A58;
+  --insitu-light-muted: #A09080;
+
+  /* Backward compatibility */
+  --snoov-primary: var(--insitu-primary);
+  --snoov-primary-hover: var(--insitu-primary-hover);
+  --snoov-primary-light: var(--insitu-primary-light);
+  --snoov-primary-subtle: var(--insitu-primary-subtle);
+  --snoov-canvas: var(--insitu-canvas);
+  --snoov-sand: var(--insitu-sand);
+  --snoov-ecru: var(--insitu-ecru);
+  --snoov-cream: var(--insitu-cream);
+  --snoov-border: var(--insitu-border);
+  --snoov-border-dark: var(--insitu-border-dark);
+  --snoov-charcoal: var(--insitu-charcoal);
+  --snoov-muted: var(--insitu-muted);
+  --snoov-light-muted: var(--insitu-light-muted);
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+@layer base {
+  body {
+    background-color: var(--insitu-canvas);
+    color: var(--insitu-charcoal);
+    transition: background-color 0.25s ease, color 0.25s ease;
+  }
+}
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .tracking-editorial {
+    letter-spacing: 0.15em;
+  }
+
+  .tracking-widest-plus {
+    letter-spacing: 0.25em;
+  }
+}
+
+@layer components {
+  .content-container {
+    @apply max-w-[1440px] w-full mx-auto px-4 sm:px-6 lg:px-12;
+  }
+
+  .editorial-container {
+    @apply max-w-[1200px] w-full mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center bg-insitu-green text-white text-xs uppercase font-medium tracking-editorial px-8 py-3.5 rounded-[2px] transition-all duration-300 hover:bg-insitu-green-hover hover:shadow-sm active:scale-[0.99] disabled:opacity-50 disabled:pointer-events-none;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center border border-insitu-border bg-transparent text-insitu-charcoal text-xs uppercase font-medium tracking-editorial px-8 py-3.5 rounded-[2px] transition-all duration-300 hover:border-insitu-charcoal hover:bg-white active:scale-[0.99];
+  }
+
+  .editorial-link {
+    @apply relative inline-block text-xs uppercase tracking-editorial font-medium text-insitu-charcoal transition-colors hover:text-insitu-green after:content-[''] after:absolute after:bottom-[-2px] after:left-0 after:w-0 after:h-[1px] after:bg-insitu-green after:transition-all after:duration-300 hover:after:w-full;
+  }
 }
