@@ -1,0 +1,9 @@
+node_modules/
+.next/
+dist/
+build/
+out/
+.git/
+package-lock.json
+*.log
+.DS_Store
